@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace CatWorx.BadgeMaker
@@ -20,7 +19,8 @@ namespace CatWorx.BadgeMaker
         {
             break;
         }
-        employees.Add(input);
+        Employee currentEmployee = new Employee(input, "smith");
+        employees.Add(currentEmployee.GetFullName());
         }
         return employees;
     }
