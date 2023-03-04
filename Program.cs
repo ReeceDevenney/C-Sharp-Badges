@@ -11,12 +11,19 @@ namespace CatWorx.BadgeMaker
         while (true)
         {
         Console.WriteLine("Please enter a name: (leave empty to exit): ");
-        string input = Console.ReadLine() ?? "";
-        if (input == "")
+        string firstName = Console.ReadLine() ?? "";
+        if (firstName == "")
         {
             break;
         }
-        Employee currentEmployee = new Employee(input, "smith");
+        Console.Write("Enter last name: ");
+        string lastName = Console.ReadLine() ?? "";
+        Console.Write("Enter ID: ");
+        int id = Int32.Parse(Console.ReadLine() ?? "");
+        Console.Write("Enter Photo URL:");
+        string photoUrl = Console.ReadLine() ?? "";
+
+        Employee currentEmployee = new Employee(firstName, lastName, id, photoUrl);
         employees.Add(currentEmployee);
         }
         return employees;
@@ -26,7 +33,8 @@ namespace CatWorx.BadgeMaker
     {
         for (int i = 0; i < employees.Count; i++)
         {
-        Console.WriteLine(employees[i].GetFullName);
+        string template = "{0,-10}\t{1,-20}\t{2}";
+        Console.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetFullName(), employees[i].GetPhotoUrl()));
         }
     }
 
