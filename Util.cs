@@ -1,3 +1,5 @@
+using SkiaSharp;
+
 namespace CatWorx.BadgeMaker
 {
     class Util
@@ -29,7 +31,6 @@ namespace CatWorx.BadgeMaker
                 file.WriteLine("ID,Name,PhotoUrl");
                 for (int i = 0; i < employees.Count; i++)
                 {
-                    // Write each employee to the file
                     string template = "{0},{1},{2}";
                     file.WriteLine(
                         String.Format(
@@ -41,6 +42,14 @@ namespace CatWorx.BadgeMaker
                     );
                 }
             }
+        }
+
+        public static void MakeBadges(List<Employee> employees)
+        {
+            SKImage newImage = SKImage.FromEncodedData(File.OpenRead("badge.png"));
+
+            SKData data = newImage.Encode();
+            data.SaveTo(File.OpenWrite("data/employeeBadge.png"));
         }
     }
 }
