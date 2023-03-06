@@ -19,3 +19,4 @@ C:\Coding\projects\c#\CatWorx.BadgeMaker\bin\Debug\net6.0\runtimes\win-arm64\nat
 C:\Coding\projects\c#\CatWorx.BadgeMaker\bin\Debug\net6.0\runtimes\win-x64\native\libSkiaSharp.dll
 C:\Coding\projects\c#\CatWorx.BadgeMaker\bin\Debug\net6.0\runtimes\win-x86\native\libSkiaSharp.dll
 C:\Coding\projects\c#\CatWorx.BadgeMaker\obj\Debug\net6.0\CatWorx.BadgeMaker.csproj.CopyComplete
+C:\Coding\projects\c#\CatWorx.BadgeMaker\bin\Debug\net6.0\Newtonsoft.Json.dll
